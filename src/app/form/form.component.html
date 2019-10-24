@@ -1,0 +1,12 @@
+<app-dialog class="dialog" *ngIf="showDialog" [title]="dialogTitle" [body]="dialogBody"></app-dialog>
+<ng-template #dialogBody>
+  <form [formGroup]="formGroup" class="form">
+    <mat-form-field appearance="outline" class="form-element" *ngFor="let col of cols">
+      <mat-label>{{col.header}}</mat-label>
+      <input matInput [formControlName]="col.field">
+      <mat-error *ngIf="formGroup.controls[col.field].invalid && formGroup.controls[col.field].touched">
+        The Field is required
+      </mat-error>
+    </mat-form-field>
+  </form>
+</ng-template>

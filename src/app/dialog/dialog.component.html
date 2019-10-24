@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="dialog" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <h2 class="dialog-title">{{ title }}</h2>
+        <ng-container [ngTemplateOutlet]="body"></ng-container>
+        <div class="dialog-actions">
+          <div class="dialog-close"></div>
+          <div class="dialog-submit"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
